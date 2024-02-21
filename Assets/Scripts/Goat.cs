@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Goat : MonoBehaviour
+public class Goat : Animal
 {
     public bool hasHorns;
 
