@@ -56,15 +56,13 @@ public class Turtle : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             new Move();
-        }
+        
 
-        if (collision.gameObject.tag == "Player")
-        {
+        
             new Eat();
-        }
+        
 
-        if (collision.gameObject.tag == "Player")
-        {
+        
             new HideInShell();
         }
     }

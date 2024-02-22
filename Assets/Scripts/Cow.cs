@@ -63,16 +63,18 @@ public class Cow : MonoBehaviour, IMovable
         if (collision.gameObject.tag == "Player")
         {
             new CowEat();
-        }
+        
 
-        if (collision.gameObject.tag == "Player")
-        {
+        
+        
             new CowMove();
-        }
+        
 
-        if (collision.gameObject.tag == "Player")
-        {
+        
             new ProduceMilk();
+
+            
+
         }
     }
 }

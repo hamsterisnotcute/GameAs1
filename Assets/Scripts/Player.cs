@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Player : MonoBehaviour, Iinteractable
 {
     public float moveSpeed = 5f;
 
@@ -24,9 +24,24 @@ public class Player : MonoBehaviour
         animator.SetFloat("Speed", movement.sqrMagnitude);
     }
 
+
+    public void Interact(string name)
+    {
+        Debug.Log(name);
+    }
+
+
     private void FixedUpdate()
     {
         //Movement
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+    }
+
+
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Interact(collision.name);
     }
 }

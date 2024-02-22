@@ -50,6 +50,8 @@ public class Chicken : MonoBehaviour
         Chickennn[] chicken = { move, eat, layEgg };
         for (int i = 0; i < chicken.Length; i++)
             Debug.Log("Chicken" + chicken[i].Act());
+
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -57,16 +59,10 @@ public class Chicken : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             new Move();
-        }
-
-        if (collision.gameObject.tag == "Player")
-        {
             new Eat();
-        }
-
-        if (collision.gameObject.tag == "Player")
-        {
             new LayEgg();
         }
     }
+
+
 }
