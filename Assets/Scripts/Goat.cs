@@ -2,22 +2,51 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Goat : Animal
+public class Goat : MonoBehaviour
 {
     public bool hasHorns;
 
-    public override void Move()
+    public abstract class GOOOAT
     {
-        Debug.Log("Goat is trotting around...");
+        public virtual string Act()
+        {
+            return "baebaebabebaeeekhyunnnn";
+        }
+        
     }
 
-    public override void Eat()
+    public class Move : GOOOAT
     {
-        Debug.Log("Goat is grazing on grass...");
+        public override string Act()
+        {
+            return " is trotting around...";
+        }
     }
 
-    public void Charge()
+    public class Eat: GOOOAT
     {
-        Debug.Log("Goat is charging!");
+        public override string Act()
+        {
+            return " is grazing on grass...";
+        }
+    }
+
+    public class Charge : GOOOAT
+    {
+        public override string Act()
+        {
+            return " is charging!";
+        }
+    }
+
+    void Start()
+    {
+        Move move = new Move();
+        Eat eat = new Eat();
+        Charge charge = new Charge();
+
+        GOOOAT[] goat = { move, eat, charge };
+        for (int i = 0; i < goat.Length; i++)
+            Debug.Log("Goat" + goat[i].Act());
     }
 }
