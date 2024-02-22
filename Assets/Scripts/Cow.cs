@@ -57,4 +57,22 @@ public class Cow : MonoBehaviour, IMovable
         for (int i = 0; i < cow.Length; i++)
             Debug.Log("Cow" + cow[i].Act());
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            new CowEat();
+        }
+
+        if (collision.gameObject.tag == "Player")
+        {
+            new CowMove();
+        }
+
+        if (collision.gameObject.tag == "Player")
+        {
+            new ProduceMilk();
+        }
+    }
 }
