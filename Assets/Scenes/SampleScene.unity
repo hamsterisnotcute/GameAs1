@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 82567467}
   - component: {fileID: 82567466}
   - component: {fileID: 82567469}
+  - component: {fileID: 82567470}
   m_Layer: 0
   m_Name: chicken
   m_TagString: Untagged
@@ -244,6 +245,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasFeathers: 0
+--- !u!114 &82567470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 82567465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b43fa0de95b959848ac654553825cd8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &109628161
 GameObject:
   m_ObjectHideFlags: 0
@@ -497,6 +510,7 @@ GameObject:
   - component: {fileID: 392923897}
   - component: {fileID: 392923901}
   - component: {fileID: 392923900}
+  - component: {fileID: 392923902}
   m_Layer: 0
   m_Name: chicken (1)
   m_TagString: Untagged
@@ -651,6 +665,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &392923902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 392923896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b43fa0de95b959848ac654553825cd8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &486984334
 GameObject:
   m_ObjectHideFlags: 0
@@ -22477,6 +22503,7 @@ GameObject:
   - component: {fileID: 1418982297}
   - component: {fileID: 1418982296}
   - component: {fileID: 1418982299}
+  - component: {fileID: 1418982300}
   m_Layer: 0
   m_Name: Cow
   m_TagString: Untagged
@@ -22585,6 +22612,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasMilk: 0
+--- !u!114 &1418982300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1418982295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b43fa0de95b959848ac654553825cd8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1453238514
 GameObject:
   m_ObjectHideFlags: 0
@@ -22597,6 +22636,7 @@ GameObject:
   - component: {fileID: 1453238516}
   - component: {fileID: 1453238515}
   - component: {fileID: 1453238518}
+  - component: {fileID: 1453238519}
   m_Layer: 0
   m_Name: Cow (1)
   m_TagString: Untagged
@@ -22705,6 +22745,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasMilk: 0
+--- !u!114 &1453238519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1453238514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b43fa0de95b959848ac654553825cd8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1476103127
 GameObject:
   m_ObjectHideFlags: 0

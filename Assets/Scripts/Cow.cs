@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Cow : MonoBehaviour
+public class Cow : MonoBehaviour, IMovable
 {
     public bool hasMilk;
 
@@ -40,6 +40,11 @@ public class Cow : MonoBehaviour
             return " is producing milk.";
         }
         
+    }
+
+    public void Move(Vector3 destination)
+    {
+        transform.position = destination;
     }
 
     void Start()
