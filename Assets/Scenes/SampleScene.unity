@@ -134,7 +134,6 @@ GameObject:
   - component: {fileID: 82567468}
   - component: {fileID: 82567467}
   - component: {fileID: 82567466}
-  - component: {fileID: 82567469}
   m_Layer: 0
   m_Name: chicken
   m_TagString: Untagged
@@ -231,22 +230,6 @@ Transform:
   - {fileID: 617520071}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &82567469
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 82567465}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf14bce768ff6ac47bc3f3ebac74fbf9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animalName: Chicken
-  age: 6
-  health: 4
-  hasFeathers: 1
 --- !u!1 &109628161
 GameObject:
   m_ObjectHideFlags: 0
@@ -258,7 +241,6 @@ GameObject:
   - component: {fileID: 109628164}
   - component: {fileID: 109628163}
   - component: {fileID: 109628162}
-  - component: {fileID: 109628165}
   m_Layer: 0
   m_Name: Turtle
   m_TagString: Untagged
@@ -354,22 +336,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &109628165
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 109628161}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 781cee5b2fb85354fb7e4251c6bf69aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animalName: Turtle
-  age: 3
-  health: 7
-  canSwim: 1
 --- !u!1 &209213482
 GameObject:
   m_ObjectHideFlags: 0
@@ -381,7 +347,6 @@ GameObject:
   - component: {fileID: 209213485}
   - component: {fileID: 209213484}
   - component: {fileID: 209213483}
-  - component: {fileID: 209213486}
   m_Layer: 0
   m_Name: Cow (3)
   m_TagString: Untagged
@@ -477,22 +442,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &209213486
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 209213482}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e9e387065859cd4cbe5047c4ec66e17, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animalName: Cow
-  age: 42
-  health: 21
-  hasMilk: 1
 --- !u!1 &392923896
 GameObject:
   m_ObjectHideFlags: 0
@@ -504,6 +453,7 @@ GameObject:
   - component: {fileID: 392923899}
   - component: {fileID: 392923898}
   - component: {fileID: 392923897}
+  - component: {fileID: 392923901}
   - component: {fileID: 392923900}
   m_Layer: 0
   m_Name: chicken (1)
@@ -614,9 +564,54 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animalName: Chicken
-  age: 14
-  health: 7
+  age: 0
+  health: 1
   hasFeathers: 1
+--- !u!61 &392923901
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 392923896}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &486984334
 GameObject:
   m_ObjectHideFlags: 0
@@ -632,8 +627,8 @@ GameObject:
   - component: {fileID: 486984339}
   - component: {fileID: 486984340}
   m_Layer: 0
-  m_Name: Basic Charakter Spritesheet_0
-  m_TagString: Untagged
+  m_Name: Player
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -647,11 +642,11 @@ Transform:
   m_GameObject: {fileID: 486984334}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -15.86, y: 8.31, z: -0.5041545}
+  m_LocalPosition: {x: 15.446517, y: -7.2048664, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2022004798}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &486984336
 MonoBehaviour:
@@ -800,7 +795,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.018075466, y: -0.06025648}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -811,7 +806,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.33718395, y: 0.517951}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!1 &519420028
 GameObject:
@@ -824,6 +819,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -874,7 +870,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 15
+  orthographic size: 4.218189
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -899,12 +895,27 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -15.1, y: 10.6, z: -10}
+  m_LocalScale: {x: 3.29, y: 3.69, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72a29e0cd4f976d4ca6cc2cd1c03abd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 486984335}
+  offset: {x: 0, y: 0, z: -7.91}
+  smoothSpeed: 0.125
 --- !u!1 &617520070
 GameObject:
   m_ObjectHideFlags: 0
@@ -19159,7 +19170,7 @@ Transform:
   m_GameObject: {fileID: 1311003067}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.31, y: -0.58, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -22306,7 +22317,6 @@ GameObject:
   - component: {fileID: 1411268448}
   - component: {fileID: 1411268447}
   - component: {fileID: 1411268446}
-  - component: {fileID: 1411268449}
   m_Layer: 0
   m_Name: Goat (1)
   m_TagString: Untagged
@@ -22402,22 +22412,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1411268449
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1411268445}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50e3baee068099a4992e82634d3cd71f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animalName: Goat
-  age: 2
-  health: 3
-  hasHorns: 1
 --- !u!1 &1418982295
 GameObject:
   m_ObjectHideFlags: 0
@@ -22429,7 +22423,6 @@ GameObject:
   - component: {fileID: 1418982298}
   - component: {fileID: 1418982297}
   - component: {fileID: 1418982296}
-  - component: {fileID: 1418982299}
   m_Layer: 0
   m_Name: Cow
   m_TagString: Untagged
@@ -22525,22 +22518,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1418982299
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1418982295}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e9e387065859cd4cbe5047c4ec66e17, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animalName: Cow
-  age: 3
-  health: 12
-  hasMilk: 1
 --- !u!1 &1453238514
 GameObject:
   m_ObjectHideFlags: 0
@@ -22552,7 +22529,6 @@ GameObject:
   - component: {fileID: 1453238517}
   - component: {fileID: 1453238516}
   - component: {fileID: 1453238515}
-  - component: {fileID: 1453238518}
   m_Layer: 0
   m_Name: Cow (1)
   m_TagString: Untagged
@@ -22648,22 +22624,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1453238518
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1453238514}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e9e387065859cd4cbe5047c4ec66e17, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animalName: Cow
-  age: 32
-  health: 12
-  hasMilk: 1
 --- !u!1 &1476103127
 GameObject:
   m_ObjectHideFlags: 0
@@ -25431,7 +25391,6 @@ GameObject:
   - component: {fileID: 1752191519}
   - component: {fileID: 1752191518}
   - component: {fileID: 1752191517}
-  - component: {fileID: 1752191520}
   m_Layer: 0
   m_Name: Cow (2)
   m_TagString: Untagged
@@ -25527,54 +25486,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1752191520
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1752191516}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e9e387065859cd4cbe5047c4ec66e17, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animalName: Cow
-  age: 12
-  health: 12
-  hasMilk: 1
---- !u!1 &2022004797
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2022004798}
-  m_Layer: 0
-  m_Name: Player
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2022004798
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2022004797}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.9965174, y: -2.2748666, z: 0.5041545}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 486984335}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2038578370
 GameObject:
   m_ObjectHideFlags: 0
@@ -25586,7 +25497,6 @@ GameObject:
   - component: {fileID: 2038578373}
   - component: {fileID: 2038578372}
   - component: {fileID: 2038578371}
-  - component: {fileID: 2038578374}
   m_Layer: 0
   m_Name: Turtle (1)
   m_TagString: Untagged
@@ -25682,22 +25592,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2038578374
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2038578370}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 781cee5b2fb85354fb7e4251c6bf69aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animalName: 3
-  age: 5
-  health: 2
-  canSwim: 1
 --- !u!1 &2104337104
 GameObject:
   m_ObjectHideFlags: 0
@@ -27040,7 +26934,6 @@ GameObject:
   - component: {fileID: 2145897965}
   - component: {fileID: 2145897964}
   - component: {fileID: 2145897963}
-  - component: {fileID: 2145897966}
   m_Layer: 0
   m_Name: Goat
   m_TagString: Untagged
@@ -27136,22 +27029,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2145897966
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2145897962}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50e3baee068099a4992e82634d3cd71f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animalName: Goat
-  age: 3
-  health: 1
-  hasHorns: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -27168,4 +27045,4 @@ SceneRoots:
   - {fileID: 1411268448}
   - {fileID: 109628164}
   - {fileID: 2038578373}
-  - {fileID: 2022004798}
+  - {fileID: 486984335}
