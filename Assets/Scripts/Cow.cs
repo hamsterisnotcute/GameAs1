@@ -2,27 +2,54 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Cow : Animal
+public class Cow : MonoBehaviour
 {
     public bool hasMilk;
 
     // Start is called before the first frame update
+
+    public abstract class COWWW
+    {
+        public virtual string Act()
+        {
+            return "chanyeool";
+        }
+    }
+
+    public class CowMove : COWWW
+    {
+        public override string Act()
+        {
+            return " is walking slowly...";
+        }
+    }
+
+    public class CowEat : COWWW
+    {
+        public override string Act()
+        {
+            return " is munching on grass...";
+        }
+        
+    }
+
+    public class ProduceMilk : COWWW
+    {
+        public override string Act()
+        {
+            return " is producing milk.";
+        }
+        
+    }
+
     void Start()
     {
-    }
+        CowMove cowMove = new CowMove();
+        CowEat cowEat = new CowEat();
+        ProduceMilk produceMilk = new ProduceMilk();
 
-    public override void Move()
-    {
-        Debug.Log("Cow is walking slowly...");
-    }
-
-    public override void Eat()
-    {
-        Debug.Log("Cow is munching on grass...");
-    }
-
-    public void ProduceMilk()
-    {
-        Debug.Log("Cow is producing milk.");
+        COWWW[] cow = { cowMove, cowEat, produceMilk };
+        for (int i = 0; i < cow.Length; i++)
+            Debug.Log("Cow" + cow[i].Act());
     }
 }

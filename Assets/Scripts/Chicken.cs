@@ -2,27 +2,53 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Chicken : Animal
+public class Chicken : MonoBehaviour
 {
     public bool hasFeathers;
 
     // Start is called before the first frame update
+    
+    public abstract class Chickennn
+    {
+        public virtual string Act()
+        {
+            return "jisung";
+        }
+    }
+    public class Move : Chickennn
+    {
+        public override string Act()
+        {
+            return " is pecking around...";
+        }
+        
+    }
+
+    public class Eat : Chickennn
+    {
+        public override string Act()
+        {
+            return " is eating seeds...";
+        }
+       
+    }
+
+    public class LayEgg : Chickennn
+    {
+        public override string Act()
+        {
+            return " laid an egg!";
+        }      
+    }
+
     void Start()
     {
-    }
+        Move move = new Move();
+        Eat eat = new Eat();
+        LayEgg layEgg = new LayEgg();
 
-    public override void Move()
-    {
-        Debug.Log("Chicken is pecking around...");
-    }
-
-    public override void Eat()
-    {
-        Debug.Log("Chicken is eating seeds...");
-    }
-
-    public void LayEgg()
-    {
-        Debug.Log("Chicken laid an egg!");
+        Chickennn[] chicken = { move, eat, layEgg };
+        for (int i = 0; i < chicken.Length; i++)
+            Debug.Log("Chicken" + chicken[i].Act());
     }
 }
