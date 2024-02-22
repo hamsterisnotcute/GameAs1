@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class Chicken : Animal
 {
+    public bool hasFeathers;
+
     // Start is called before the first frame update
     void Start()
     {
-    public bool hasFeathers;
+    }
 
     public override void Move()
     {
@@ -22,6 +24,5 @@ public class Chicken : Animal
     public void LayEgg()
     {
         Debug.Log("Chicken laid an egg!");
-    }
     }
 }

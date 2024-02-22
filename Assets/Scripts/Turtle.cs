@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class Turtle : Animal
 {
+    public bool canSwim;
+
     // Start is called before the first frame update
     void Start()
     {
-    public bool canSwim;
+    }
 
     public override void Move()
     {
@@ -23,5 +25,4 @@ public class Turtle : Animal
     {
         Debug.Log("Turtle is hiding in its shell.");
     }      
-    }
 }
