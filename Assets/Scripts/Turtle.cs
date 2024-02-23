@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Turtle : MonoBehaviour
 {
     public bool canSwim;
+    public GameObject UiObject;
 
     // Start is called before the first frame update
 
@@ -49,6 +51,8 @@ public class Turtle : MonoBehaviour
         Turtlee[] turtle = { move, eat, hideInShell };
         for (int i = 0; i < turtle.Length; i++)
             Debug.Log("Turtle" + turtle[i].Act());
+
+        UiObject.SetActive(false);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -64,6 +68,13 @@ public class Turtle : MonoBehaviour
 
         
             new HideInShell();
+
+            UiObject.SetActive(true);
         }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        UiObject.SetActive(false);
     }
 }

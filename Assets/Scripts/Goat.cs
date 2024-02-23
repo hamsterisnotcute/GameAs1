@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Goat : MonoBehaviour
 {
     public bool hasHorns;
+    public GameObject UiObject;
 
     public abstract class GOOOAT
     {
@@ -48,6 +50,8 @@ public class Goat : MonoBehaviour
         GOOOAT[] goat = { move, eat, charge };
         for (int i = 0; i < goat.Length; i++)
             Debug.Log("Goat" + goat[i].Act());
+
+        UiObject.SetActive(false);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -63,6 +67,13 @@ public class Goat : MonoBehaviour
 
         
             new Charge();
+
+            UiObject.SetActive(true);
         }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        UiObject.SetActive(false);
     }
 }

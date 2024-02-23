@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Chicken : MonoBehaviour
 {
     public bool hasFeathers;
+    public GameObject UiObject;
 
     // Start is called before the first frame update
     
@@ -51,6 +53,8 @@ public class Chicken : MonoBehaviour
         for (int i = 0; i < chicken.Length; i++)
             Debug.Log("Chicken" + chicken[i].Act());
 
+        UiObject.SetActive(false);
+
 
     }
 
@@ -61,7 +65,14 @@ public class Chicken : MonoBehaviour
             new Move();
             new Eat();
             new LayEgg();
+
+            UiObject.SetActive(true);
         }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        UiObject.SetActive(false);
     }
 
 

@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Cow : MonoBehaviour, IMovable
 {
     public bool hasMilk;
+    public GameObject UiObject;
 
     // Start is called before the first frame update
 
@@ -56,25 +58,21 @@ public class Cow : MonoBehaviour, IMovable
         COWWW[] cow = { cowMove, cowEat, produceMilk };
         for (int i = 0; i < cow.Length; i++)
             Debug.Log("Cow" + cow[i].Act());
+
+        UiObject.SetActive(false);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player")
-        {
-            new CowEat();
-        
+        new CowMove();
+        new CowEat();
+        new CowEat();
 
-        
-        
-            new CowMove();
-        
+        UiObject.SetActive(true);
+    }
 
-        
-            new ProduceMilk();
-
-            
-
-        }
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        UiObject.SetActive(false);
     }
 }
